@@ -1,30 +1,27 @@
+import classNames from 'classnames';
 import React from 'react';
-import './Card.css';
+import classes from './Card.module.scss';
 
 function Card({
-// eslint-disable-next-line react/prop-types
   card, choiceHandler, flipped, disabled,
 }) {
-  let cardClasses = '';
-
-  // eslint-disable-next-line react/prop-types
-  if (card?.matched) {
-    cardClasses = 'correct';
-  } else {
-    cardClasses = 'wrong';
-  }
+  const cardClasses = classNames(
+    classes.card,
+    {
+      [classes.flipped]: flipped,
+      [classes.correct]: card?.matched,
+      [classes.wrong]: !card?.matched,
+    },
+  );
 
   const clickHandler = () => {
     if (!disabled) choiceHandler(card);
   };
   return (
-    <div className="card__wrapper">
-      <div className={flipped ? `card flipped ${cardClasses}` : 'card'}>
-        {/* eslint-disable-next-line react/prop-types */}
-        <img className="front" src={card?.img} alt="front card" />
-        {/* eslint-disable-next-line max-len */}
-        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
-        <div className="back" onClick={clickHandler} />
+    <div className={classes.card__wrapper}>
+      <div className={cardClasses}>
+        <img className={classes.front} src={card?.img} alt="front card" />
+        <div role="presentation" className={classes.back} onKeyDown={clickHandler} onClick={clickHandler} />
       </div>
     </div>
   );

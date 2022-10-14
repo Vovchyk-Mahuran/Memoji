@@ -1,0 +1,54 @@
+@use '../../assets/styles/variables.scss' as v;
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background: v.$black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    pointer-events: none;
+    opacity: 0;
+
+
+    &__content {
+        width: 300px;
+        height: 200px;
+        background-color: v.$white;
+        border-radius: 20px;
+        transform: translateY(100%);
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &.active {
+            transform: translateY(0);
+        }
+    }
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .content {
+        &__result {
+            font: 600 25px/35px sans-serif;
+        }
+
+        &__btn {
+            font: 600 20px/25px sans-serif;
+            background: linear-gradient(to right,v.$gradientStart 1%, v.$gradientEnd 100%);
+            color: v.$white;
+            border:none;
+            border-radius: 8px;
+            padding: 5px 10px;
+        }
+    }
+}

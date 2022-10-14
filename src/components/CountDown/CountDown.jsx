@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import './CountDown.css';
+import classes from './CountDown.module.scss';
 
 function CountDown({
-// eslint-disable-next-line react/prop-types
   isTimerActive, setLoseStatus, isResultShowed,
 }) {
-  const [seconds, setSeconds] = useState(10);
+  const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(1);
 
   useEffect(() => {
     if (!isResultShowed) {
-      setSeconds(5);
+      setSeconds(0);
       setMinutes(1);
     }
   }, [isResultShowed]);
@@ -29,7 +28,7 @@ function CountDown({
   }, [seconds, isTimerActive]);
 
   return (
-    <div className="countdown">
+    <div className={classes.countdown}>
       { `0${minutes}`.slice(-2) }
       :
       { `0${seconds}`.slice(-2) }

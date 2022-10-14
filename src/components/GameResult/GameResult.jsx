@@ -1,14 +1,22 @@
+import classNames from 'classnames';
 import React from 'react';
-import './GameResult.css';
+import classes from './GameResult.module.scss';
 
-// eslint-disable-next-line react/prop-types
 function GameResult({ result, isOpen, closeResult }) {
+  const modalClasses = classNames(
+    classes.modal,
+    { [`${classes.active}`]: isOpen },
+  );
+  const modalContentClasses = classNames(
+    classes.modal__content,
+    classes.content,
+    { [`${classes.active}`]: isOpen },
+  );
   return (
-    <div className={isOpen ? 'modal active' : 'modal'}>
-      <div className={isOpen ? 'modal__content content active' : 'modal__content content'}>
-        {/* eslint-disable-next-line react/prop-types */}
-        <span className="content__result">{result.toUpperCase()}</span>
-        <button type="button" onClick={closeResult} className="content__tryAgain">
+    <div className={modalClasses}>
+      <div className={modalContentClasses}>
+        <span className={`${classes.content__result}`}>{result.toUpperCase()}</span>
+        <button type="button" onClick={closeResult} className={`${classes.content__btn}`}>
           {result === 'win' ? 'Play again' : 'Try Again'}
         </button>
       </div>
