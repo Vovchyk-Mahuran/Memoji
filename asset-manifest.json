@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/memoji/static/css/main.f980f729.css",
-    "main.js": "/memoji/static/js/main.d079ebf0.js",
-    "static/js/787.9feffc79.chunk.js": "/memoji/static/js/787.9feffc79.chunk.js",
-    "static/media/angularLogo.png": "/memoji/static/media/angularLogo.b6d2a9dec3e43e0ffb95.png",
-    "static/media/jsLogo.png": "/memoji/static/media/jsLogo.7f8751632b42a9932c15.png",
-    "static/media/reactLogo.png": "/memoji/static/media/reactLogo.e310fdba3cc970b15d75.png",
-    "static/media/cssLogo.png": "/memoji/static/media/cssLogo.84de5dab5fab27f4161c.png",
-    "static/media/vueLogo.png": "/memoji/static/media/vueLogo.945cec33efff6d97a1b2.png",
-    "static/media/htmlLogo.png": "/memoji/static/media/htmlLogo.ff3cf75e3b7cbb4ea77c.png",
-    "index.html": "/memoji/index.html",
-    "main.f980f729.css.map": "/memoji/static/css/main.f980f729.css.map",
-    "main.d079ebf0.js.map": "/memoji/static/js/main.d079ebf0.js.map",
-    "787.9feffc79.chunk.js.map": "/memoji/static/js/787.9feffc79.chunk.js.map"
+    "main.css": "/Memoji/static/css/main.f980f729.css",
+    "main.js": "/Memoji/static/js/main.8e834e2e.js",
+    "static/js/787.9feffc79.chunk.js": "/Memoji/static/js/787.9feffc79.chunk.js",
+    "static/media/angularLogo.png": "/Memoji/static/media/angularLogo.b6d2a9dec3e43e0ffb95.png",
+    "static/media/jsLogo.png": "/Memoji/static/media/jsLogo.7f8751632b42a9932c15.png",
+    "static/media/reactLogo.png": "/Memoji/static/media/reactLogo.e310fdba3cc970b15d75.png",
+    "static/media/cssLogo.png": "/Memoji/static/media/cssLogo.84de5dab5fab27f4161c.png",
+    "static/media/vueLogo.png": "/Memoji/static/media/vueLogo.945cec33efff6d97a1b2.png",
+    "static/media/htmlLogo.png": "/Memoji/static/media/htmlLogo.ff3cf75e3b7cbb4ea77c.png",
+    "index.html": "/Memoji/index.html",
+    "main.f980f729.css.map": "/Memoji/static/css/main.f980f729.css.map",
+    "main.8e834e2e.js.map": "/Memoji/static/js/main.8e834e2e.js.map",
+    "787.9feffc79.chunk.js.map": "/Memoji/static/js/787.9feffc79.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f980f729.css",
-    "static/js/main.d079ebf0.js"
+    "static/js/main.8e834e2e.js"
   ]
 }
